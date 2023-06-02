@@ -1,0 +1,52 @@
+.container{
+    padding: 50px;
+}
+
+.auth-container{
+    justify-content: space-between;
+}
+
+.auth-container,
+.user-details-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
+    
+    :not(:last-child){
+        margin-right: 20px;
+    }
+}
+
+.auth-field{
+    flex: 1 1 30%
+}
+
+.form-field {
+    min-width: 30%;
+}
+
+.checkbox-container{
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    :not(:last-child){
+        margin-bottom: 20px;
+    }
+}
+
+.submit-actions{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.progress-spinner{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}

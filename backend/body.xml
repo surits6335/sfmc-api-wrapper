@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soapenv:Header>
+    <fueloauth>eyJhbGciOiJIUzI1NiIsImtpZCI6IjQiLCJ2ZXIiOiIxIiwidHlwIjoiSldUIn0.eyJhY2Nlc3NfdG9rZW4iOiIyS2J2RGxoYXVJUVVKUUxvektkQ2hUaE4iLCJjbGllbnRfaWQiOiIwY3BzOGh1MzQwZGF3NHI0YTVhYWdnbWwiLCJlaWQiOjUyNjAwMDkzNSwic3RhY2tfa2V5IjoiUzEyIiwicGxhdGZvcm1fdmVyc2lvbiI6MiwiY2xpZW50X3R5cGUiOiJTZXJ2ZXJUb1NlcnZlciIsInBpZCI6NDkwfQ.BdYX5uVr0aJB3oPOgLSh_Wu03OZv85xVIr3r2K8SCO0.4jLoNzmegJWraim-xBIeAzZOKlMJrhWUE0pnNVAvuwEXqU0f5OHM2GSaI7TpGzuejdRAXIK3jDQdVCPvN0tFe68opxvE_x5VglLubopgq_cPyKd87l9-XxwZAZC93aAZVKcFwHQg2Y2169owyB2pvKkr4G6jyY1PqUf_q</fueloauth>
+  </soapenv:Header>
+  <soapenv:Body>
+    <CreateRequest xmlns="http://exacttarget.com/wsdl/partnerAPI">
+      <Options>
+        <SaveOptions>
+          <SaveOption>
+            <PropertyName>*</PropertyName>
+            <SaveAction>UpdateAdd</SaveAction>
+          </SaveOption>
+        </SaveOptions>
+      </Options>
+      <Objects xsi:type="AccountUser">
+        <PartnerKey xsi:nil="true"/>
+        <ObjectID xsi:nil="true"/>
+        <Client>
+          <ID>526000935</ID>
+        </Client>
+        <UserID>fafsafas</UserID>
+        <Password>adasdsadsad</Password>
+        <Name>Mario</Name>
+        <Email>mario@gmail.com</Email>
+        <NotificationEmailAddress>shikhar.soni@cibc.com</NotificationEmailAddress>
+        <ActiveFlag>true</ActiveFlag>
+        <IsAPIUser>true</IsAPIUser>
+        <IsLocked>false</IsLocked>
+        <MustChangePassword>true</MustChangePassword>
+        <DefaultBusinessUnit>526000935</DefaultBusinessUnit>
+        <Roles>
+          <Role>
+            <ObjectID>0e3d690d-4fee-ec11-ba51-f40343d01b58</ObjectID>
+          </Role>
+        </Roles>
+      </Objects>
+    </CreateRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

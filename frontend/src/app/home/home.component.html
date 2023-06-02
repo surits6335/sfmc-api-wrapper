@@ -1,0 +1,65 @@
+<div class="container" *ngIf="!apiService.isLoading; else loader">
+    <h1>User Creation Form</h1>
+    <form [formGroup]="form" class="user-form">
+        <div class="auth-container">
+            <mat-form-field class="auth-field">
+                <mat-label>User ID</mat-label>
+                <input matInput formControlName="userID">
+                <mat-error *ngIf="form.controls['userID'].invalid">{{getErrorMessage('userID')}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="auth-field">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password">
+                <mat-error *ngIf="form.controls['password'].invalid">{{getErrorMessage('password')}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="user-details-container">
+            <mat-form-field class="form-field">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name">
+                <mat-error *ngIf="form.controls['name'].invalid">{{getErrorMessage('name')}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="form-field">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+                <mat-error *ngIf="form.controls['email'].invalid">{{getErrorMessage('email')}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="form-field">
+                <mat-label>Notification Email Address</mat-label>
+                <input matInput formControlName="notificationEmailAddress">
+                <mat-error *ngIf="form.controls['notificationEmailAddress'].invalid">{{getErrorMessage('notificationEmailAddress')}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="form-field">
+                <mat-label>Default Business Unit</mat-label>
+                <input matInput placeholder="0" formControlName="defaultBusinessUnit">
+                <mat-error *ngIf="form.controls['defaultBusinessUnit'].invalid">{{getErrorMessage('defaultBusinessUnit')}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="form-field">
+                <mat-label>Object ID</mat-label>
+                <input matInput formControlName="roleObjectID">
+                <mat-error *ngIf="form.controls['roleObjectID'].invalid">{{getErrorMessage('roleObjectID')}}</mat-error>
+            </mat-form-field>
+            <div class="checkbox-container">
+                <div class="form-field-checkbox">
+                    <input type="checkbox" formControlName="isActive">Active
+                </div>
+                <div class="form-field-checkbox">
+                    <input type="checkbox" formControlName="isAPIUser">API User
+                </div>
+                <div class="form-field-checkbox">
+                    <input type="checkbox" formControlName="isLocked">Locked
+                </div>
+                <div class="form-field-checkbox">
+                    <input type="checkbox" formControlName="mustChangePassword">Must Change Password
+                </div>
+            </div>
+        </div>
+        <div class="submit-actions">
+            <button mat-raised-button (click)="onSubmit()">Submit</button>
+        </div>
+    </form>
+</div>
+
+<ng-template #loader>
+    <mat-spinner class="progress-spinner"></mat-spinner>
+</ng-template>
